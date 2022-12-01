@@ -1,6 +1,9 @@
-import './App.css';
 import React from 'react';
+import './App.css';
 import axios from 'axios';
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
+import Register from './components/Register/Register';
+import Login from './components/Login/Login';
 
 class App extends React.Component {
   state = {
@@ -18,15 +21,35 @@ class App extends React.Component {
       console.error(`Error fetching data: ${error}`);
     })
   }
-
-  render(){
+  render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          Project 2
-        </header>
-        {this.state.data}
-      </div>
+      <Router>
+        <div className="App">
+          <header className="App-header">
+            <h1>Project 2</h1>
+            <ul>
+              <li>
+                <Link to="/">Home</Link>
+              </li>
+              <li>
+                <Link to="/register">Register</Link>
+              </li>
+              <li>
+                <Link to="/login">Login</Link>
+              </li>
+            </ul>
+          </header>
+          <main>
+            <Route exact path="/">
+              {this.state.data}
+            </Route>
+            <Switch>
+              <Route exact path="/register" component={Register}/>
+              <Route exact path="/login" component={Login}/>
+            </Switch>
+          </main>
+        </div>
+      </Router>
     );
   }
 }
