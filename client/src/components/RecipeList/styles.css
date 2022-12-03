@@ -1,0 +1,28 @@
+.recipeListItem {
+    padding: 10px;
+    border: solid 2px transparent;
+    max-width: 500px;
+    text-align: center;
+}
+
+.recipeListItem:hover {
+    background-color: cadetblue;
+    border-color: #aaa;
+    border: solid 3px #aaa;
+    cursor: grab;
+}
+
+.recipeListItem p {
+    max-width: 500px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.recipeControls {
+    margin: 10px 0 10px 0;
+}
+
+.recipeControls button {
+    margin-left: 10px;
+}
