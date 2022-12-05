@@ -25,8 +25,8 @@ const RecipeListItem = props => {
                 <h2>{recipe.name}</h2>
             </div>
             <div className="recipeControls">
-                <button onClick={() => deleteRecipe(recipe)}>Delete</button>
-                <button onClick={() => handleEditRecipe(recipe)}>Edit</button>
+                <button className="recipeListButton" onClick={() => deleteRecipe(recipe)}>Delete</button>
+                <button className="recipeListButton" onClick={() => handleEditRecipe(recipe)}>Edit</button>
             </div>
         </div>
     );

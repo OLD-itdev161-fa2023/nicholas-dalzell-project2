@@ -25,7 +25,7 @@ const CreateRecipe = ({ token, onRecipeCreated }) => {
         if(!name || !ingredients || !garnish) {
             console.log('Name, ingredients, and garnish are required');
         } else {
-            const newPost = {
+            const newRecipe = {
                 name: name,
                 ingredients: ingredients,
                 garnish: garnish

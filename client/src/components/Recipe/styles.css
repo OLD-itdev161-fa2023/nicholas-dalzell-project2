@@ -3,6 +3,7 @@
     flex-direction: column;
     max-width: 500px;
     margin: 0 auto;
+    border: 1 px solid black;
 }
 
 .form-container input {
@@ -11,4 +12,9 @@
 
 .form-container button {
     width: 100px;
+}
+
+.recipeList button {
+    align-items: center;
+    background-color: cadetblue;
 }

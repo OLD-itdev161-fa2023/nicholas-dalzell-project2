@@ -187,7 +187,8 @@ class App extends React.Component {
                   <React.Fragment>
                     <div>Hello {user}!</div>
                     <div>Welcome to the cocktail list.</div>
-                    <div>Click on one of the cocktails to see the recipe & garnish!</div>
+                    <div>Click on one of the cocktails to see the recipe & garnish</div>
+                    <div>Or Select "New Recipe" in the toolbar to add a cocktail to the list.</div>
                     <RecipeList 
                       recipes={recipes} 
                       clickRecipe={this.viewRecipe}
